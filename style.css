@@ -1,0 +1,226 @@
+/*
+* The Serial Gomoku
+* style.css
+*/
+
+/*
+//
+// Elementos gerais
+//
+*/
+
+/* Fundo da página */
+body {
+	background: url('images/background.png');
+}
+
+/* Retira linhas decorativas dos campos */
+input:focus {
+	outline: none;
+}
+
+/* Tela central */
+div.Corpo {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*
+//
+// Grade de jogadas
+//
+*/
+
+/* Espaço usado pela tabela */
+div.Tabela {
+	width: 550px;
+	height: 550px;
+	margin-top: 20px;
+	float: left;
+}
+
+	/* Tabela usada como grade */
+	table.Grade {
+		padding: 0px;
+		border-spacing: 0px;
+		background: #8B8989;
+	}
+	
+		/* Pontos marcáveis no jogo */
+		input.GradeJogada {
+			background: #CDC9C9;
+			width: 28px;
+			height: 28px;
+			border: none;
+			outline: none;	
+		}
+
+/* Sobreposição à tabela para bloqueá-la */
+div.TabelaBloqueada {
+	width: 570px;
+	height: 570px;
+	position:absolute;
+	top:27px;		
+	background:gray;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+			
+/*
+//
+// Painel de comandos
+//
+*/
+
+/* Espaço utilizado pelo paonel  */	
+div.Painel {
+	width: 250px;
+	height: 550px;
+	margin-top: 20px;
+	margin-left: 50px;
+	float: left;
+}
+
+	/* Espaço dos botões das ações */
+	div.PainelAcoes {
+		width: 100%;
+		height: 200px;
+	}
+
+		/* Botões habilitados */
+		input.PainelAcoesBotoes {
+			width: 175px;
+			height: 50px;
+			border-radius: 5px;
+			font-weight: bold;
+			font-family: Arial;
+			font-size: 12px;
+			color: black;
+			border: 1px solid #b7b7b7;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration:none;
+			background-color: #d3d3d3;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#707070));
+			background-image: -webkit-linear-gradient(top, #d3d3d3, #707070);
+			background-image: -moz-linear-gradient(top, #d3d3d3, #707070);
+			background-image: -ms-linear-gradient(top, #d3d3d3, #707070);
+			background-image: -o-linear-gradient(top, #d3d3d3, #707070);
+			background-image: linear-gradient(to bottom, #d3d3d3, #707070);
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#707070);
+		}
+
+		/* Botões habilitados */
+		input.PainelAcoesBotoes:hover{
+			border:1px solid #a0a0a0;
+			background-color: #bababa;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#575757));
+			background-image: -webkit-linear-gradient(top, #bababa, #575757);
+			background-image: -moz-linear-gradient(top, #bababa, #575757);
+			background-image: -ms-linear-gradient(top, #bababa, #575757);
+			background-image: -o-linear-gradient(top, #bababa, #575757);
+			background-image: linear-gradient(to bottom, #bababa, #575757);
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#575757);
+		}
+		
+		/* Botões desabilitados */
+		input.PainelAcoesBotoesDesabilitado {
+			width: 175px;
+			height: 50px;
+			border-radius: 5px;
+			font-weight: bold;
+			font-family: Arial;
+			font-size: 12px;
+			color: #C3C3C3;
+			border: 1px solid #b7b7b7;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration:none;
+			background-color: #d3d3d3;
+		}
+
+	/* Espaço dos botões de informações */
+	div.PainelInformacoes {
+		width: 100%;
+		height: 100px;
+		margin-top: 40px;
+	}
+	
+		/* Botões de informações */
+		input.PainelInformacoesBotoes {
+			width: 50px;
+			height: 50px;
+			border:1px solid #616261;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+
+		/* Botão de ajuda */
+		#PainelSobreAjuda {
+			background: url('images/help.png');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		/* Botão de créditos */
+		#PainelSobreCreditos {
+			background: url('images/info.png');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+	/* Espaço do placar */
+	div.PainelPlacar {
+		width: 100%;
+		height: 200px;
+		margin-top: 20px;
+	}
+		
+		/* Espaço dos placares individuais */
+		div.PainelPlacarJogador{
+			width: 45%;
+			height: 100%;
+			float: left;
+			margin-left: 10px;
+		}
+		
+			/* Legenda do placar */
+			input.PainelPlacarLabel{
+				width: 100%;
+				height: 40px;
+				text-align: center;
+				font-weight: bold;
+				font-family: Arial;
+				font-size: 12px;
+				color: black;
+				border: 0px;
+			}
+
+			/* Legenda do jogador preto */
+			#PainelPlacarLabelPreto {
+				background: black;
+				color: white;
+			}
+
+			/* Legenda do jogador branco */
+			#PainelPlacarLabelBranco {
+				background: white;
+				color: black;
+			}
+
+			/* Pontuação do jogador */
+			input.PainelPlacarNumero{
+				width: 100%;
+				height: 100px;
+				text-align: center;
+				background: none;
+				font-weight: bold;
+				font-family: Arial;
+				font-size: 50px;
+				color: white;
+				border: 1px solid #616261;
+			}
